@@ -1,0 +1,217 @@
+/* =========================================================
+   ROOT VARIABLES (GLOBAL DESIGN SYSTEM)
+   These control the main theme colors and fonts used across the site
+========================================================= */
+:root {
+    --primary-color: #163a70;
+    /* dark navy blue */
+    --secondary-color: #1f5fa8;
+    /* medium blue */
+    --accent1-color: #ffffff;
+    /* white */
+    --accent2-color: #f4f4f4;
+    /* light gray */
+
+    --heading-font: "Georgia", "Times New Roman", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   GLOBAL RESET
+   Removes default browser spacing for consistent layout
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   BODY STYLES
+   Sets default font and background color
+========================================================= */
+body {
+    font-family: var(--body-font);
+    background-color: var(--accent2-color);
+    color: #333;
+}
+
+/* =========================================================
+   PAGE LAYOUT CONTAINER
+   Centers page content and limits width
+========================================================= */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER SECTION
+   Contains logo and navigation menu
+========================================================= */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+/* Company logo */
+header img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   NAVIGATION BAR
+   Horizontal navigation menu with blue background
+========================================================= */
+nav {
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 5px;
+}
+
+/* Navigation list layout */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Removes default list spacing */
+nav li {
+    margin: 0;
+}
+
+/* Navigation links */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+}
+
+/* Hover effect for links */
+nav a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* =========================================================
+   HERO SECTION
+   Main feature area with image and overlay content
+========================================================= */
+.hero {
+    position: relative;
+}
+
+/* Main hero image */
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+/* Main heading overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    background-color: rgba(22, 58, 112, 0.85);
+    color: white;
+
+    padding: 15px;
+
+    font-family: var(--heading-font);
+}
+
+/* =========================================================
+   HERO ARTICLE
+   Text box with image aligned side by side
+========================================================= */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    background-color: rgba(22, 58, 112, 0.85);
+    color: white;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Paragraph takes available space */
+.hero article p {
+    flex: 1;
+}
+
+/* Image inside hero article */
+.hero article img {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* =========================================================
+   CONTENT SECTIONS
+   History and Adventure sections
+========================================================= */
+section h2 {
+    background-color: var(--primary-color);
+    color: white;
+
+    text-align: center;
+
+    padding: 12px;
+    margin-top: 20px;
+
+    font-family: var(--heading-font);
+}
+
+/* Section paragraph spacing */
+section p {
+    padding: 15px;
+}
+
+/* =========================================================
+   FOOTER SECTION
+   Copyright and social media links
+========================================================= */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* =========================================================
+   SOCIAL MEDIA ICONS
+========================================================= */
+.socialmedia {
+    margin-top: 10px;
+}
+
+/* Removes underline from icons */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* Social media icon size */
+.socialmedia img {
+    width: 90px;
+    margin: 5px;
+}
