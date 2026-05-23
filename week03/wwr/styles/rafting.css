@@ -1,16 +1,11 @@
 /* =========================================================
-   ROOT VARIABLES (GLOBAL DESIGN SYSTEM)
-   These control the main theme colors and fonts used across the site
+   ROOT VARIABLES
 ========================================================= */
 :root {
     --primary-color: #163a70;
-    /* dark navy blue */
     --secondary-color: #1f5fa8;
-    /* medium blue */
     --accent1-color: #ffffff;
-    /* white */
     --accent2-color: #f4f4f4;
-    /* light gray */
 
     --heading-font: "Georgia", "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
@@ -18,7 +13,6 @@
 
 /* =========================================================
    GLOBAL RESET
-   Removes default browser spacing for consistent layout
 ========================================================= */
 * {
     margin: 0;
@@ -28,7 +22,6 @@
 
 /* =========================================================
    BODY STYLES
-   Sets default font and background color
 ========================================================= */
 body {
     font-family: var(--body-font);
@@ -37,8 +30,7 @@ body {
 }
 
 /* =========================================================
-   PAGE LAYOUT CONTAINER
-   Centers page content and limits width
+   PAGE CONTAINER
 ========================================================= */
 header,
 main,
@@ -49,7 +41,6 @@ footer {
 
 /* =========================================================
    HEADER SECTION
-   Contains logo and navigation menu
 ========================================================= */
 header {
     display: flex;
@@ -59,7 +50,7 @@ header {
     padding: 20px 0;
 }
 
-/* Company logo */
+/* Logo */
 header img {
     width: 120px;
     margin-bottom: 10px;
@@ -67,7 +58,6 @@ header img {
 
 /* =========================================================
    NAVIGATION BAR
-   Horizontal navigation menu with blue background
 ========================================================= */
 nav {
     background-color: var(--primary-color);
@@ -76,7 +66,7 @@ nav {
     border-radius: 5px;
 }
 
-/* Navigation list layout */
+/* Navigation list */
 nav ul {
     list-style: none;
     display: flex;
@@ -84,7 +74,7 @@ nav ul {
     gap: 30px;
 }
 
-/* Removes default list spacing */
+/* Navigation items */
 nav li {
     margin: 0;
 }
@@ -92,12 +82,12 @@ nav li {
 /* Navigation links */
 nav a {
     text-decoration: none;
-    color: white;
+    color: var(--accent1-color);
     font-weight: bold;
     padding: 8px 15px;
 }
 
-/* Hover effect for links */
+/* Hover effect */
 nav a:hover {
     background-color: var(--secondary-color);
     border-radius: 5px;
@@ -105,19 +95,18 @@ nav a:hover {
 
 /* =========================================================
    HERO SECTION
-   Main feature area with image and overlay content
 ========================================================= */
 .hero {
     position: relative;
 }
 
-/* Main hero image */
-.hero img {
+/* Main hero image only */
+.hero>img {
     width: 100%;
     display: block;
 }
 
-/* Main heading overlay */
+/* Hero heading overlay */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -127,17 +116,14 @@ nav a:hover {
     text-align: center;
 
     background-color: rgba(22, 58, 112, 0.85);
-    color: white;
+    color: var(--accent1-color);
 
     padding: 15px;
 
     font-family: var(--heading-font);
 }
 
-/* =========================================================
-   HERO ARTICLE
-   Text box with image aligned side by side
-========================================================= */
+/* Hero article overlay */
 .hero article {
     position: absolute;
     bottom: 20px;
@@ -145,34 +131,32 @@ nav a:hover {
     right: 20px;
 
     background-color: rgba(22, 58, 112, 0.85);
-    color: white;
+    color: var(--accent1-color);
 
     padding: 15px;
 
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    overflow: hidden;
 }
 
-/* Paragraph takes available space */
-.hero article p {
-    flex: 1;
-}
-
-/* Image inside hero article */
+/* Image inside article */
 .hero article img {
+    float: right;
     width: 120px;
-    height: auto;
+    margin-left: 15px;
     border-radius: 5px;
+}
+
+/* Hero article text */
+.hero article p {
+    line-height: 1.5;
 }
 
 /* =========================================================
    CONTENT SECTIONS
-   History and Adventure sections
 ========================================================= */
 section h2 {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--accent1-color);
 
     text-align: center;
 
@@ -182,14 +166,13 @@ section h2 {
     font-family: var(--heading-font);
 }
 
-/* Section paragraph spacing */
+/* Paragraph spacing */
 section p {
     padding: 15px;
 }
 
 /* =========================================================
    FOOTER SECTION
-   Copyright and social media links
 ========================================================= */
 footer {
     text-align: center;
@@ -203,15 +186,16 @@ footer {
 ========================================================= */
 .socialmedia {
     margin-top: 10px;
+    background: none;
 }
 
-/* Removes underline from icons */
+/* Removes underline */
 .socialmedia a {
     text-decoration: none;
 }
 
-/* Social media icon size */
+/* Social media images */
 .socialmedia img {
-    width: 90px;
+    width: 50px;
     margin: 5px;
 }
