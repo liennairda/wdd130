@@ -1,3 +1,21 @@
+:root {
+    --primary-color: rgb(14, 0, 139);
+    --secondary-color: darkblue;
+    --light-background: #eee;
+    --box-background: #ddd;
+    --text-color: #333;
+    --box-text-color: #05013b;
+    --white-color: white;
+    --border-dark: 1px solid black;
+    --border-light: 1px solid rgb(0 0 0 / 0.2);
+    --box-border: 1px solid rgb(0 0 0 / 10%);
+    --padding-small: 10px;
+    --padding-medium: 1rem;
+    --image-width: 170px;
+    --aside-width: 20em;
+    --shadow-color: gray;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +23,12 @@
 }
 
 nav {
-    background-color: rgb(14, 0, 139);
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: var(--padding-small);
 }
 
 nav a {
-    color: white;
+    color: var(--white-color);
     display: block;
     padding: 20px;
 }
@@ -20,19 +38,15 @@ main {
 }
 
 h1 {
-    color: darkblue;
+    color: var(--secondary-color);
 }
 
 main img {
-    /* you most likely will have other CSS declarations here */
-}
-
-main img {
-    width: 170px;
+    width: var(--image-width);
     height: auto;
-    border: 1px solid black;
+    border: var(--border-dark);
     padding: 2px;
-    box-shadow: 0 0 50px gray;
+    box-shadow: 0 0 50px var(--shadow-color);
     float: right;
     margin-left: 10px;
 }
@@ -43,13 +57,12 @@ p {
 
 aside {
     position: relative;
-    width: 20em;
+    width: var(--aside-width);
     margin: 1em;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    /* 1️⃣ */
-    padding: 1em;
-    background-color: #eee;
-    color: #333;
+    border: var(--border-light);
+    padding: var(--padding-medium);
+    background-color: var(--light-background);
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -66,21 +79,16 @@ aside img {
 
 footer {
     margin-top: 1em;
-    border-top: 1p solid #000;
+    border-top: 1px solid #000;
     text-align: center;
 }
 
 /* Class Selectors */
 
 .box {
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 10%);
-    padding: 1rem;
-    background-color: #ddd;
-    color: #05013b;
-}
-
-aside {
-    width: 20em;
-    text-align: center;
+    margin: var(--padding-medium);
+    border: var(--box-border);
+    padding: var(--padding-medium);
+    background-color: var(--box-background);
+    color: var(--box-text-color);
 }
