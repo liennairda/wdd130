@@ -1,5 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
-    background-color: darkblue;
+    background-color: rgb(0, 139, 0);
     padding: 10px;
 }
 
@@ -15,6 +21,11 @@ main {
 
 h1 {
     color: darkblue;
+}
+
+main img {
+    /* you most likely will have other CSS declarations here */
+    float: right;
 }
 
 main img {
@@ -40,6 +51,12 @@ aside {
     text-align: center;
 }
 
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+}
+
 aside img {
     width: 200px;
     height: auto;
@@ -48,5 +65,20 @@ aside img {
 footer {
     margin-top: 1em;
     border-top: 1p solid #000;
+    text-align: center;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+}
+
+aside {
+    width: 20em;
     text-align: center;
 }
