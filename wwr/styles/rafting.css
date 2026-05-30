@@ -1,37 +1,25 @@
-/* =========================================================
-   ROOT VARIABLES
-========================================================= */
 :root {
     --primary-color: #163a70;
     --secondary-color: #1f5fa8;
     --accent1-color: #ffffff;
     --accent2-color: #f4f4f4;
 
-    --heading-font: "Georgia", "Times New Roman", serif;
+    --heading-font: Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* =========================================================
-   GLOBAL RESET
-========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================================================
-   BODY STYLES
-========================================================= */
 body {
     font-family: var(--body-font);
     background-color: var(--accent2-color);
     color: #333;
 }
 
-/* =========================================================
-   PAGE CONTAINER
-========================================================= */
 header,
 main,
 footer {
@@ -39,163 +27,194 @@ footer {
     margin: 0 auto;
 }
 
-/* =========================================================
-   HEADER SECTION
-========================================================= */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* HEADER */
 
-    padding: 20px 0;
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
 }
 
-/* Logo */
 header img {
     width: 120px;
-    margin-bottom: 10px;
 }
 
-/* =========================================================
-   NAVIGATION BAR
-========================================================= */
+/* NAVIGATION */
+
 nav {
     background-color: var(--primary-color);
-    width: 100%;
-    padding: 12px 0;
-    border-radius: 5px;
+    border-radius: 6px;
+    padding: 12px;
 }
 
-/* Navigation list */
 nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-around;
+    list-style: none;
 }
 
-/* Navigation items */
-nav li {
-    margin: 0;
-}
-
-/* Navigation links */
 nav a {
+    color: white;
     text-decoration: none;
-    color: var(--accent1-color);
     font-weight: bold;
-    padding: 8px 15px;
+    padding: 10px;
 }
 
-/* Hover effect */
 nav a:hover {
     background-color: var(--secondary-color);
     border-radius: 5px;
 }
 
-/* =========================================================
-   HERO SECTION
-========================================================= */
+/* HERO */
+
 .hero {
     position: relative;
 }
 
-/* Main hero image only */
 .hero>img {
     width: 100%;
     display: block;
 }
 
-/* Hero heading overlay */
 .hero h1 {
     position: absolute;
     top: 20px;
-    left: 0;
-    right: 0;
-
+    width: 100%;
     text-align: center;
-
     background-color: rgba(22, 58, 112, 0.85);
-    color: var(--accent1-color);
-
+    color: white;
     padding: 15px;
-
     font-family: var(--heading-font);
 }
 
-/* Hero article overlay */
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
-
     background-color: rgba(22, 58, 112, 0.85);
-    color: var(--accent1-color);
-
+    color: white;
     padding: 15px;
-
-    overflow: hidden;
 }
 
-/* Image inside article */
 .hero article img {
     float: right;
     width: 120px;
     margin-left: 15px;
-    border-radius: 5px;
 }
 
-/* Hero article text */
 .hero article p {
     line-height: 1.5;
 }
 
-/* =========================================================
-   CONTENT SECTIONS
-========================================================= */
+/* SECTION TITLES */
+
 section h2 {
-    background-color: var(--primary-color);
-    color: var(--accent1-color);
-
     text-align: center;
-
-    padding: 12px;
-    margin-top: 20px;
-
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    margin-top: 25px;
     font-family: var(--heading-font);
 }
 
-/* Paragraph spacing */
-section p {
-    padding: 15px;
+/* HISTORY SECTION */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    gap: 25px;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
 }
 
-/* =========================================================
-   FOOTER SECTION
-========================================================= */
-footer {
+.history-left,
+.history-right {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.history-image {
+    display: flex;
+    justify-content: center;
+}
+
+.history-image img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ADVENTURE SECTION */
+
+.adventure-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+.adventure-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.adventure-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.adventure-scroll figure {
+    min-width: 220px;
+    flex-shrink: 0;
     text-align: center;
+}
+
+.adventure-scroll img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+.adventure-scroll img:hover {
+    transform: scale(1.05);
+}
+
+.adventure-scroll figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
     margin-top: 20px;
-    padding: 15px;
-    font-size: 14px;
 }
 
-/* =========================================================
-   SOCIAL MEDIA ICONS
-========================================================= */
 .socialmedia {
-    margin-top: 10px;
+    display: flex;
+    gap: 10px;
     background: none;
+    padding: 0;
 }
 
-/* Removes underline */
 .socialmedia a {
     text-decoration: none;
 }
 
-/* Social media images */
 .socialmedia img {
-    width: 50px;
-    margin: 5px;
+    width: 35px;
+    height: 35px;
 }
