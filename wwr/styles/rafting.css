@@ -8,19 +8,23 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-*,
-*::before,
-*::after {
+/* GLOBAL RESET */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* BODY */
 
 body {
     font-family: var(--body-font);
     background-color: var(--accent2-color);
     color: #333;
 }
+
+/* PAGE CONTAINER */
 
 header,
 main,
@@ -70,7 +74,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero {
     position: relative;
@@ -112,7 +116,7 @@ nav a:hover {
     line-height: 1.5;
 }
 
-/* SECTION TITLES */
+/* SECTION HEADINGS */
 
 section h2 {
     text-align: center;
@@ -123,7 +127,7 @@ section h2 {
     font-family: var(--heading-font);
 }
 
-/* HISTORY */
+/* HISTORY SECTION */
 
 .history-content {
     display: grid;
@@ -152,7 +156,7 @@ section h2 {
     border-radius: 8px;
 }
 
-/* ADVENTURES */
+/* ADVENTURE SECTION */
 
 .adventure-scroll {
     display: flex;
@@ -168,7 +172,7 @@ section h2 {
 }
 
 .adventure-scroll::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     border-radius: 4px;
 }
 
