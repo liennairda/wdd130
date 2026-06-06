@@ -91,25 +91,45 @@ nav a:hover {
     font-family: var(--heading-font);
 }
 
+/* =========================
+   HERO ARTICLE FIX (ABOUT PAGE)
+   ========================= */
+
 .hero article {
     position: absolute;
     bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: var(--primary-color);
-    opacity: 0.85;
-    color: var(--accent1-color);
-    padding: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    max-width: 900px;
+
+    background: rgba(22, 58, 112, 0.75);
+    /* transparent blue */
+    color: white;
+
+    padding: 20px;
+    border-radius: 12px;
+
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
+/* IMAGE INSIDE ARTICLE */
 .hero article img {
-    float: right;
     width: 120px;
-    margin-left: 15px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
 }
 
+/* TEXT INSIDE ARTICLE */
 .hero article p {
-    line-height: 1.5;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* SECTION HEADINGS */
@@ -215,4 +235,297 @@ footer {
 .socialmedia img {
     width: 35px;
     height: 35px;
+}
+
+/* =====================================================
+   GLOBAL NAV FIX (APPLIES TO ALL PAGES)
+   ===================================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--primary-color);
+}
+
+header img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation layout */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+nav a.active {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* =========================
+   HERO STACKED CONTENT FIX
+   ========================= */
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* STACK CONTENT TOGETHER */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    gap: 5px;
+    /* controls spacing between title and box */
+}
+
+/* CONTACT INFO */
+.hero-contact-info {
+    background: rgba(22, 58, 112, 0.75);
+    /* transparent blue */
+    color: white;
+
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    text-align: center;
+}
+
+/* =========================
+   MAP + FORM LAYOUT
+   ========================= */
+
+.contact-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* MAP */
+.map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* FORM */
+.contact-form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+}
+
+/* RADIO + CHECKBOX */
+.form-title {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.checkbox {
+    margin-top: 15px;
+    display: block;
+}
+
+/* BUTTON */
+.contact-form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: var(--secondary-color);
+}
+
+/* =========================
+   OWNERS SECTION
+   ========================= */
+
+.owners {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.owners h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.owners-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.owners-grid figure {
+    width: 200px;
+}
+
+.owners-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.owners-grid figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* =========================
+   OWNERS BIG BOX SECTION
+   ========================= */
+
+.owners {
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* MAIN BIG CONTAINER */
+.owners-box {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* HEADER BAR */
+.owners-header {
+    background: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.owners-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 26px;
+}
+
+/* GRID INSIDE BOX */
+.owners-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+/* EMPLOYEE CARDS */
+.owners-grid figure {
+    width: 220px;
+    text-align: center;
+}
+
+.owners-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.owners-grid figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+    .contact-main {
+        grid-template-columns: 1fr;
+    }
+
+    .map iframe {
+        min-height: 300px;
+    }
 }

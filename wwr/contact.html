@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Splash Water Rafting, Co.</title>
+
+    <meta name="description" content="Contact Splash Water Rafting, Co. for bookings, inquiries, and suggestions.">
+
+    <meta name="author" content="Adrian Neil Lumanta">
+
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER (UNCHANGED NAV) ================= -->
+    <header>
+        <img src="images/splash.png" alt="Rafting Company Logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <div class="hero">
+            <img src="images/rafting-upper.webp" alt="Rafting adventure">
+
+            <h1>Splash Water Rafting, Co.</h1>
+
+            <!-- CONTACT INFO MOVED INSIDE HERO -->
+            <article class="hero-contact-info">
+                <h2>Contact Information</h2>
+
+                <p><strong>Company:</strong> Splash Water Rafting, Co.</p>
+                <p><strong>Email:</strong> info@splashrafting.com</p>
+                <p><strong>Phone:</strong> +63 900 000 0000</p>
+                <p><strong>Location:</strong> Iligan City, Philippines</p>
+            </article>
+        </div>
+
+        <!-- ================= MAP + FORM SECTION ================= -->
+        <section class="contact-main">
+
+            <!-- LEFT: GOOGLE MAP -->
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen="">
+                </iframe>
+            </div>
+
+            <!-- RIGHT: FORM -->
+            <form class="contact-form">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <!-- MESSAGE PURPOSE (RADIO BUTTONS) -->
+                <p class="form-title">Message Purpose</p>
+
+                <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
+                <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
+                <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+
+                <!-- MESSAGE BOX -->
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+
+                <!-- NEWSLETTER -->
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Please subscribe me to the monthly newsletter
+                </label>
+
+                <!-- BUTTON -->
+                <button type="submit">Get In Touch</button>
+
+            </form>
+
+        </section>
+
+        <!-- ================= OWNERS SECTION ================= -->
+        <section class="owners">
+
+            <div class="owners-box">
+
+                <div class="owners-header">
+                    <h2>We Are Here to Serve You</h2>
+                </div>
+
+                <div class="owners-grid">
+
+                    <figure>
+                        <img src="images/prof2.webp" alt="Owner 1">
+                        <figcaption>John Wick Clean Look</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="images/prof1.webp" alt="Owner 2">
+                        <figcaption>John Wick in Battle Mode</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="images/prof3.webp" alt="Owner 3">
+                        <figcaption>John Wick after the fight</figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>©2026 Splash Water Rafting, Co. | Adrian Neil Lumanta</p>
+
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="images/linkedin.webp" alt="LinkedIn"></a>
+            <a href="#"><img src="images/instagram-icon.jpg" alt="Instagram"></a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
